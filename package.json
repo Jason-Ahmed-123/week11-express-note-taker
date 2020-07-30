@@ -1,14 +1,26 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
-  }
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jason-Ahmed-123/week11-expressjs-note-taker.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Jason-Ahmed-123/week11-expressjs-note-taker/issues"
+  },
+  "homepage": "https://github.com/Jason-Ahmed-123/week11-expressjs-note-taker#readme",
+  "description": ""
 }
