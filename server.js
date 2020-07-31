@@ -56,11 +56,10 @@ app.post("/api/notes", (req, res) => {
 
         for (let i = 0; i < db.length; i++) {
             const newNote = {
-                title: db[i].title,
-                text: db[i].text,
+                title: db[i].title, // Notes title
+                text: db[i].text,   // Notes text description
                 id: i
             };
-
             newDB.push(newNote);
         }
 
@@ -87,7 +86,6 @@ app.delete("/api/notes/:id", (req, res) => {
                     text: db[i].text,
                     id: newDB.length
                 };
-
                 newDB.push(newNote);
             }
         }

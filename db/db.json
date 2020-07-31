@@ -8,5 +8,15 @@
     "title": "Litter Box",
     "text": "Empty and disinfect cat litter box\n",
     "id": 1
+  },
+  {
+    "title": "Groceries",
+    "text": "Do full family grocery shopping in one day",
+    "id": 2
+  },
+  {
+    "title": "Trees",
+    "text": "Water the trees at the top of the hill",
+    "id": 3
   }
 ]
