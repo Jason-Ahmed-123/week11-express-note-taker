@@ -17,7 +17,9 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({
+    extended: true
+}));
 app.use(express.static("public"));
 
 
@@ -52,8 +54,7 @@ app.post("/api/notes", (req, res) => {
 
         db.push(req.body);
 
-        for (let i = 0; i < db.length; i++)
-        {
+        for (let i = 0; i < db.length; i++) {
             const newNote = {
                 title: db[i].title,
                 text: db[i].text,
@@ -78,10 +79,8 @@ app.delete("/api/notes/:id", (req, res) => {
         const db = JSON.parse(data);
         const newDB = [];
 
-        for(let i = 0; i < db.length; i++)
-        {
-            if (i !== id)
-            {
+        for (let i = 0; i < db.length; i++) {
+            if (i !== id) {
                 const newNote = {
                     title: db[i].title,
 
@@ -104,4 +103,3 @@ app.delete("/api/notes/:id", (req, res) => {
 app.listen(3001, () => {
     console.log(`API server now on port 3001`);
 });
-

@@ -1,3 +1,12 @@
-
-
-[{"title":"Test Title","text":"Test text", "id": "test_id"}]
+[
+  {
+    "title": "Test Title",
+    "text": "Test text",
+    "id": 0
+  },
+  {
+    "title": "Litter Box",
+    "text": "Empty and disinfect cat litter box\n",
+    "id": 1
+  }
+]
