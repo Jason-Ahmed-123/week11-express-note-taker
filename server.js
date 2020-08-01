@@ -76,7 +76,7 @@ app.post("/api/notes", (req, res) => {
     });
 });
 
-// Deletes note
+// This is to deletes notes:
 app.delete("/api/notes/:id", (req, res) => {
     const id = parseInt(req.params.id);
     fs.readFile(path.join(__dirname, "/db/db.json"), (err, data) => {
