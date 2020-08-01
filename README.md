@@ -13,7 +13,7 @@ https://stark-inlet-75639.herokuapp.com/
 
 ## Screenshot
 
-![Note Taker screenshot](https://user-images.githubusercontent.com/61637816/89109656-0952e880-d3f8-11ea-884b-ff4836ea13fa.png)
+![Screen Shot 2020-08-01 at 1 11 23 PM](https://user-images.githubusercontent.com/61637816/89109716-9eee7800-d3f8-11ea-8952-bda85e2f5ad8.png)
 
 ## Contribution
 Made by Jason Ahmed
