@@ -18,5 +18,10 @@
     "title": "Trees",
     "text": "Water the trees at the top of the hill",
     "id": 3
+  },
+  {
+    "title": "Tetherball",
+    "text": "Play tetherball with the kids",
+    "id": 4
   }
 ]
