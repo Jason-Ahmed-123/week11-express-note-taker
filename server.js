@@ -1,10 +1,12 @@
 // This is the main file that the server will run from.
 
+// DEPENDENCIES
+// =================================================================
 
 // "Require" Express.js
 const express = require("express");
 
-// Filename paths
+// Import the "path" module
 const path = require("path");
 
 // fs is to read and write to files
@@ -16,6 +18,7 @@ const app = express();
 // Define port:
 const PORT = process.env.PORT || 3001;
 
+// Sets up the Express app to handle data parsing
 app.use(express.json());
 app.use(express.urlencoded({
     extended: true
@@ -23,6 +26,8 @@ app.use(express.urlencoded({
 app.use(express.static("public"));
 
 
+// ROUTES
+// ==================================================================
 
 // index route that returns 'index.html'
 app.get("/", (req, res) => {
@@ -37,7 +42,8 @@ app.get("/notes", (req, res) => {
 
 // Make server "listen"
 app.get("/api/notes", (req, res) => {
-    fs.readFile(path.join(__dirname, "/db/db.json"), "utf8", (err, data) => {
+    // Error handler
+    fs.readFile(path.join(__dirname, "/db/db.json"), (err, data) => {
         if (err) throw err;
         res.json(JSON.parse(data));
     });
@@ -47,7 +53,7 @@ app.get("/api/notes", (req, res) => {
 
 // "Writes" and saves the notes
 app.post("/api/notes", (req, res) => {
-    fs.readFile(path.join(__dirname, "/db/db.json"), "utf8", (err, data) => {
+    fs.readFile(path.join(__dirname, "/db/db.json"), (err, data) => {
         if (err) throw err;
         const db = JSON.parse(data);
         const newDB = [];
@@ -73,7 +79,7 @@ app.post("/api/notes", (req, res) => {
 // Deletes note
 app.delete("/api/notes/:id", (req, res) => {
     const id = parseInt(req.params.id);
-    fs.readFile(path.join(__dirname, "/db/db.json"), "utf8", (err, data) => {
+    fs.readFile(path.join(__dirname, "/db/db.json"), (err, data) => {
         if (err) throw err;
         const db = JSON.parse(data);
         const newDB = [];
